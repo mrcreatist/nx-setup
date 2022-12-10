@@ -1,5 +1,6 @@
 PROJECT_NAME=$1
 APP_NAME=$2
+SERVER_NAME = $3
 RED='\033[0;31m'
 
 echo -e "${RED}-------------------"
@@ -23,6 +24,16 @@ echo -e "${RED}-------------------"
 echo -e "${RED}Installing Electron"
 echo -e "${RED}-------------------"
 npm i -D nx-electron
+
+echo -e "${RED}--------------------"
+echo -e "${RED}Installing Nest-js"
+echo -e "${RED}--------------------"
+npm install --save-dev --exact @nrwl/nest --legacy-peer-deps
+
+echo -e "${RED}--------------------"
+echo -e "${RED}Genrating Server App"
+echo -e "${RED}--------------------"
+nx g @nrwl/nest:app $SERVER_NAME
 
 echo -e "${RED}------------------"
 echo -e "${RED}Building $APP_NAME"
