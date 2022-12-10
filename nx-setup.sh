@@ -63,8 +63,8 @@ echo "{
 echo -e "${RED}-----------------------"
 echo -e "${RED}Adding Electron Support"
 echo -e "${RED}-----------------------"
-nx g nx-electron:app electron-app --frontendProject=$APP_NAME
-nx build electron-app
+nx g nx-electron:app electron --frontendProject=$APP_NAME
+nx build electron
 
 echo -e "${RED}--------------"
 echo -e "${RED}Setup complete"
