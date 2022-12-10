@@ -33,7 +33,7 @@ npm install --save-dev --exact @nrwl/nest --legacy-peer-deps
 echo -e "${RED}--------------------"
 echo -e "${RED}Genrating Server App"
 echo -e "${RED}--------------------"
-nx g @nrwl/nest:app $SERVER_NAME
+nx g @nrwl/nest:app $SERVER_NAME --frontendProject $APP_NAME --unitTestRunner none
 
 echo -e "${RED}------------------"
 echo -e "${RED}Building $APP_NAME"
